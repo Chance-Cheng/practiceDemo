@@ -18,11 +18,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-- (IBAction)backView:(id)sender
+- (IBAction)delegateWaybackView:(id)sender
 {
     if (self.delegate && [self.delegate respondsToSelector:@selector(changeTextValue:)])
     {
-        [self.delegate changeTextValue:@"变!!"];
+        [self.delegate changeTextValue:@"第一种方式"];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)blockWaybackView:(id)sender{
+    if (self.NextViewControllerBlock) {
+        self.NextViewControllerBlock(@"第二种方式");
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

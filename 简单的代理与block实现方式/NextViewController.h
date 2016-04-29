@@ -13,5 +13,5 @@
 @end
 @interface NextViewController : UIViewController
 @property (nonatomic, assign) id<NextViewControllerDelegate>delegate;
-
+@property (nonatomic, copy) void (^NextViewControllerBlock)(NSString *tfText);
 @end

@@ -24,10 +24,22 @@
 {
     self.firstLabel.text = tfText;
 }
+- (void)changeTextValueTwo:(NSString *)tfText
+{
+    self.secondLabel.text = tfText;
+}
 - (IBAction)GotoNextPage:(id)sender
 {
     NextViewController *nextVC = [[NextViewController alloc]init];
     nextVC.delegate = self;
+    [self.navigationController pushViewController:nextVC animated:YES];
+}
+- (IBAction)GotoNextPageTwo:(id)sender
+{
+    NextViewController *nextVC = [[NextViewController alloc]init];
+    nextVC.NextViewControllerBlock = ^(NSString *tfText){
+        [self changeTextValueTwo:tfText];
+    };
     [self.navigationController pushViewController:nextVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {

@@ -16,10 +16,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="058-Of-9Ut">
-                    <rect key="frame" x="124" y="228" width="73" height="46"/>
+                    <rect key="frame" x="57" y="204" width="73" height="46"/>
                     <state key="normal" title="返回"/>
                     <connections>
-                        <action selector="backView:" destination="-1" eventType="touchUpInside" id="uyE-6G-7v8"/>
+                        <action selector="delegateWaybackView:" destination="-1" eventType="touchUpInside" id="1Ze-5R-wsR"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXd-ZJ-6m6">
+                    <rect key="frame" x="177" y="204" width="73" height="46"/>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="blockWaybackView:" destination="-1" eventType="touchUpInside" id="rT8-RN-08g"/>
                     </connections>
                 </button>
             </subviews>
